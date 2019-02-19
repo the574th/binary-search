@@ -78,3 +78,57 @@ function binarySearch(list, name) {
 // };
 
 // console.log(binSearch(phonebook, 'phone', 29274704));
+
+// Lj answer
+// const nameList = [
+//   "Aaron",
+//   "Andy",
+//   "Batman",
+//   "Betsy",
+//   "Boba",
+//   "Bonnie",
+//   "Clarence",
+//   "Daisy",
+//   "Elektra",
+//   "Flash"
+// ];
+
+// function search(list, q) {
+//   // set init found condition
+//   let found = false;
+//   let counter = 1;
+
+//   // list by alphabetical order and convert to uppercase
+//   list = list.sort((a, b) => a - b);
+//   list = list.map(item => item.toUpperCase());
+//   q = q.toUpperCase();
+
+//   while (list.length > 1 && !found) {
+//     //  split list into half
+//     let half = Math.floor(list.length / 2);
+//     let left = list.slice(0, half);
+//     let right = list.slice(half, list.length);
+//     console.log(counter, left, q, right);
+
+//     // set last word of left side and first word of right side
+//     let leftWord = left[left.length - 1];
+//     let rightWord = right[0];
+
+//     // if left or right side == query, set found == true
+//     if (leftWord == q || rightWord == q) found = true;
+//     else {
+//       // check first char of words,
+//       // if query smaller than left and right side, set list to left side
+//       // else query must be on right side
+//       if (
+//         q.charAt(0) <= leftWord.charAt(0) &&
+//         q.charAt(0) <= rightWord.charAt(0)
+//       )
+//         list = left;
+//       else list = right;
+//     }
+//     counter++;
+//   }
+//   return found;
+// }
+// search(nameList, "Batman");
